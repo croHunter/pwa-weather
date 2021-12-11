@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background: url('./images/bg-w-pwa.jpg') no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.error {
+  color: red !important;
+  text-align: center;
+}
+.loading {
+  color: #000;
+  font-weight: bolder;
+
+  font-size: 24px;
+}
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-form,
+.result {
+  padding: 20px;
+  background-color: #242424;
+  border-radius: 10px;
+  min-width: 400px;
+  width: 100%;
+}
+.search-form {
+  display: flex;
+  justify-content: space-around;
+}
+.result {
+  margin-top: 20px;
+  color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.city,
+.city-temp,
+.info,
+.desc {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 770px) {
+  body {
+    background-size: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .search-form,
+  .result {
+    min-width: 325px;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 120px;
+    justify-content: space-between;
+  }
+  input[type='text'],
+  input[type='submit'] {
+    width: 100%;
+  }
+}
+
+input[type='text'] {
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+input[type='submit'] {
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: peru;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  background-color: rgb(110, 77, 10);
+}
